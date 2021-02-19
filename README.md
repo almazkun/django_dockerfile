@@ -28,3 +28,16 @@ COPY . .
 
 CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
 ```
+
+## Build
+`docker build -t d_django .`
+
+## Run
+`docker run -p 8000:8000 --name dj d_django`
+
+### Some docker commands
+1. Remove all images not referenced by any container
+`docker image prune -a`
+
+2.Remove all stopped containers 
+`docker container rm $(docker container ls -aq)`
