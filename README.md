@@ -37,7 +37,10 @@ CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
 
 ### Some docker commands
 1. Remove all images not referenced by any container
-`docker image prune -a`
-
-2.Remove all stopped containers 
-`docker container rm $(docker container ls -aq)`
+```bash
+docker image prune -a
+```
+2. Remove all stopped containers
+```bash
+docker container rm $(docker container ls -aq)
+```
